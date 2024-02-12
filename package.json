@@ -1,0 +1,12 @@
+{
+  "name": "web3-block-scanner",
+  "version": "1.0.0",
+  "description": "A web3 block scanner and web3 transaction application. An assignment in the Blockchain Developer Program @ Medieinstitutet.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
