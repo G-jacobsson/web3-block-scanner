@@ -1,8 +1,11 @@
-@import 'reset';
+@use 'reset';
+@use 'header';
+@use 'variables' as *;
 
 body {
-  background-color: #2f4f4f;
-  color: #fababa;
+  background-color: $backgroundColor;
+  color: $textColor;
   font-family: 'Protest Revolution', sans-serif;
   font-size: 1.5em;
+  text-align: center;
 }
