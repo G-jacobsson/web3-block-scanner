@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Protest+Riot&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/css/style.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.5.0/web3.min.js"
+      integrity="sha512-FhAl50BpK3gf9K//lbAWek9EEQEtGQyyXZNc1fuwcC2tVf2cskiJBcumXY0zJksYtms6S5cqubp1MNfUYTkO2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="module"
+      src="/src/app.js"
+      defer
+    ></script>
+    <title>Block Scanner & Trx</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <section>
+          <div class="form">
+            <input
+              type="text"
+              name="accountNumber"
+              id="accountNumber"
+              placeholder="Account number..."
+            />
+            <button
+              id="checkBalance"
+              class="btn"
+            >
+              Check balance
+            </button>
+            <span>ETH Balance</span>
+            <div id="balance"></div>
+          </div>
+
+          <div class="form">
+            <input
+              type="text"
+              name="amount"
+              id="amount"
+              placeholder="Send amount..."
+            />
+          </div>
+          <div class="form">
+            <input
+              type="text"
+              name="toAccount"
+              id="toAccount"
+              placeholder="To account..."
+            />
+          </div>
+          <div class="form">
+            <button
+              id="sendTrx"
+              class="btn"
+            >
+              Send
+            </button>
+          </div>
+        </section>
+        <section>
+          <h4>Transactions</h4>
+          <div class="trxContainer">
+            <div class="transaction">
+              <span>From</span>
+              <span>To</span>
+              <span>Amount</span>
+            </div>
+            <div id="transactions"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
