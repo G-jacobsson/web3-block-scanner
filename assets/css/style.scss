@@ -3,8 +3,10 @@
 @use 'variables' as *;
 
 body {
-  background-color: $backgroundColor;
-  color: $textColor;
+  background-image: $backgroundImage;
+  background-size: cover;
+  color: $secondaryTextColor;
+  text-shadow: 2px 2px 2px black;
   font-family: 'Protest Revolution', sans-serif;
   font-size: 1.5em;
   text-align: center;
