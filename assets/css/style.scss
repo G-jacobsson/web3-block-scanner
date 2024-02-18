@@ -11,3 +11,24 @@ body {
   font-size: 1.5em;
   text-align: center;
 }
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-image: $backgroundImage;
+  background-size: 110% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: zoomAndPan 20s ease-in-out infinite alternate;
+}
+
+@keyframes zoomAndPan {
+  0% {
+    background-size: 110% auto;
+    background-position: 50% 0;
+  }
+  100% {
+    background-size: 120% auto;
+    background-position: 50% 100%;
+  }
+}
