@@ -41,7 +41,13 @@ async function checkBalance() {
       });
 
       const parsedBalance = parseInt(balance) / Math.pow(10, 18);
-      displayBalance.innerHTML = parsedBalance.toFixed(2) + ' ETH';
+      displayBalance.innerHTML = `<div 
+      style="font-size: clamp(1rem, 2vw, 2rem);
+      color: #0d1f1f;
+      text-shadow: 0 0 5px #fababa;
+      background: #fababa;
+      border-radius: 10px;
+      padding: 10px;">${parsedBalance.toFixed(2)} ETH </div>`;
     } else {
       throw new Error('Account not found');
     }

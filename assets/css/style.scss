@@ -19,15 +19,18 @@ body {
 }
 
 .wrapper {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   height: 100vh;
   width: 100vw;
+  padding: 10px;
 }
 
 .wrapper-div {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,12 +56,41 @@ body {
 .text-pop {
   color: $secondaryTextColor;
   text-shadow: 0 0 5px $primaryColor;
-  font-size: clamp(1rem, 2vw, 2.5rem);
+  font-size: clamp(1rem, 2vw, 2rem);
   margin: 25px;
 }
 
 #enter {
   font-size: clamp(2rem, 3vw, 3.5rem);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.trx-container {
+  padding: 10px;
+  margin-top: 10px;
+  border-top: solid 1px $secondaryTextColor;
+}
+
+.trx-container span {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+h4 {
+  margin-top: 10px;
 }
 
 main {
@@ -72,7 +104,9 @@ main {
 }
 
 @keyframes zoomEffect {
-  0%,
+  0% {
+    background-size: 110% auto;
+  }
   100% {
     background-size: 110% auto;
   }
