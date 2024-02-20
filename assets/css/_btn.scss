@@ -1,0 +1,33 @@
+@use 'variables' as *;
+
+.btn {
+  background: #e73884;
+  background-image: -webkit-linear-gradient(top, #b13168, #801f49);
+  background-image: -moz-linear-gradient(top, #b13168, #801f49);
+  background-image: -ms-linear-gradient(top, #b13168, #801f49);
+  background-image: -o-linear-gradient(top, #b13168, #801f49);
+  background-image: linear-gradient(to bottom, #b13168, #801f49);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: 'Anta', sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: none;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background: #fad7d7;
+  background-image: -webkit-linear-gradient(top, #fad7d7, #f09e9e);
+  background-image: -moz-linear-gradient(top, #fad7d7, #f09e9e);
+  background-image: -ms-linear-gradient(top, #fad7d7, #f09e9e);
+  background-image: -o-linear-gradient(top, #fad7d7, #f09e9e);
+  background-image: linear-gradient(to bottom, #fad7d7, #f09e9e);
+  text-decoration: none;
+  cursor: pointer;
+}

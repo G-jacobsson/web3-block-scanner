@@ -16,7 +16,7 @@
       crossorigin
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Protest+Riot&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anta&display=swap"
       rel="stylesheet"
     />
     <link
@@ -37,68 +37,68 @@
     <title>Block Scanner & Trx</title>
   </head>
   <body>
-    <main>
-      <div class="container">
-        <section>
-          <button
-            id="connect"
-            class="btn"
-          >
-            Connect
-          </button>
-          <div class="form">
-            <input
-              type="text"
-              name="accountNumber"
-              id="accountNumber"
-              placeholder="Account number..."
-            />
+    <main class="background">
+      <div class="wrapper">
+        <div class="wrapper-div">
+          <section class="text-pop">
             <button
-              id="checkBalance"
+              id="connect"
               class="btn"
             >
-              Check balance
+              Connect
             </button>
-            <span>ETH Balance</span>
-            <div id="balance"></div>
-          </div>
-
-          <div class="form">
-            <input
-              type="text"
-              name="amount"
-              id="amount"
-              placeholder="Send amount..."
-            />
-          </div>
-          <div class="form">
-            <input
-              type="text"
-              name="toAccount"
-              id="toAccount"
-              placeholder="To account..."
-            />
-          </div>
-          <div class="form">
-            <button
-              id="sendTrx"
-              class="btn"
-            >
-              Send
-            </button>
-          </div>
-        </section>
-        <section>
-          <h4>Transactions</h4>
-          <div class="trxContainer">
-            <div class="transaction">
-              <span>From</span>
-              <span>To</span>
-              <span>Amount</span>
+            <div class="form">
+              <input
+                type="text"
+                name="accountNumber"
+                id="accountNumber"
+                placeholder="Account number..."
+              />
+              <button
+                id="checkBalance"
+                class="btn"
+              >
+                Check balance
+              </button>
+              <span>ETH Balance</span>
+              <div id="balance"></div>
             </div>
-            <div id="transactions"></div>
-          </div>
-        </section>
+
+            <div class="form">
+              <input
+                type="text"
+                name="amount"
+                id="amount"
+                placeholder="Send amount..."
+              />
+            </div>
+            <div class="form">
+              <input
+                type="text"
+                name="toAccount"
+                id="toAccount"
+                placeholder="To account..."
+              />
+            </div>
+            <div class="form">
+              <button
+                id="sendTrx"
+                class="btn"
+              >
+                Send
+              </button>
+            </div>
+            <h4>Transactions</h4>
+            <div class="trxContainer">
+              <div class="transaction">
+                <span>From</span>
+                <span>To</span>
+                <span>Amount</span>
+              </div>
+              <div id="transactions"></div>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
   </body>
