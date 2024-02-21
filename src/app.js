@@ -47,8 +47,12 @@ async function checkBalance() {
       });
 
       const parsedBalance = parseInt(balance) / Math.pow(10, 18);
+      displayBalance.style.display = 'flex';
+      displayBalance.style.justifyContent = 'center';
+      displayBalance.style.alignItems = 'center';
       displayBalance.innerHTML = `<div 
-      style="font-size: clamp(1rem, 2vw, 2rem);
+      style="width: fit-content;
+      font-size: clamp(1rem, 2vw, 2rem);
       color: #0d1f1f;
       text-shadow: 0 0 5px #fababa;
       background: #fababa;
@@ -82,7 +86,15 @@ async function sendTransaction() {
       params: params,
     });
 
-    const transaction = await rpc.eth.getTransaction(response);
+    const transaction = await ethereum.request({
+      method: 'eth_getTransactionByHash',
+      params: [response],
+    });
+
+    listTransactions.style.display = 'flex';
+    listTransactions.style.flexDirection = 'column';
+    listTransactions.style.justifyContent = 'center';
+    listTransactions.style.alignItems = 'center';
     listTransactions.innerHTML = `<div
     style="width: fit-content;
     display: grid;
