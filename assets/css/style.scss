@@ -36,8 +36,8 @@ body {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  width: 50vw;
-  height: 50vh;
+  min-width: 50vw;
+  min-height: 50vh;
   // min-width: 300px;
   // min-height: 200px;
   overflow: hidden;
@@ -84,13 +84,19 @@ input {
 .trx-container span {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
-  padding: 10px;
+  padding: 25px;
   font-size: clamp(1rem, 2vw, 2rem);
 }
 
 h4 {
   margin-top: 10px;
+}
+
+.list-transactions span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 main {

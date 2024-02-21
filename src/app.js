@@ -17,6 +17,12 @@ function initApp() {
   console.log(rpc);
 }
 
+function formatAddress(address) {
+  return (
+    address.substring(0, 6) + '...' + address.substring(address.length - 4)
+  );
+}
+
 async function connectWallet() {
   try {
     if (typeof ethereum !== 'undefined') {
@@ -56,6 +62,50 @@ async function checkBalance() {
   }
 }
 
+async function sendTransaction() {
+  console.log('You clicked the send button');
+
+  try {
+    const parsedAmount = parseFloat(amount.value) * Math.pow(10, 18);
+    let params = [
+      {
+        from: accountInput.value,
+        to: toAccountInput.value,
+        value: Number(parsedAmount).toString(16),
+        gas: Number(21000).toString(16),
+        gasPrice: Number(20000000).toString(16),
+      },
+    ];
+
+    const response = await ethereum.request({
+      method: 'eth_sendTransaction',
+      params: params,
+    });
+
+    const transaction = await rpc.eth.getTransaction(response);
+    listTransactions.innerHTML = `<div
+    style="width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    color: #0d1f1f;
+    text-shadow: 0 0 5px #fababa;
+    background: #fababa;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;">
+    <span>${formatAddress(transaction.from)}</span> 
+    <span>${formatAddress(transaction.to)}</span>
+    <span>${rpc.utils.fromWei(transaction.value, 'ether')} ETH</span>
+    </div>`;
+
+    console.log(transaction);
+  } catch (error) {
+    throw new Error('Error sending transaction', error);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', initApp);
 connectBtn.addEventListener('click', connectWallet);
 checkBalanceBtn.addEventListener('click', checkBalance);
+sendBtn.addEventListener('click', sendTransaction);
