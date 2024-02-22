@@ -2,7 +2,7 @@ export async function connectWallet(ethereumService) {
   console.log('connectwWallet function called');
   if (!ethereumService) {
     accountInput.value = '';
-    initApp();
+    return;
   }
   try {
     const account = await ethereumService.connect();
