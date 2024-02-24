@@ -16,6 +16,7 @@ function initApp() {
       break;
     case 'scanner':
     case 'scanner.html':
+    case '/src/pages/scanner':
     case '/src/pages/scanner.html':
       console.log('scanner page');
       setupEventListeners(ethereumService);
