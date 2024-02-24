@@ -7,11 +7,15 @@ let ethereumService;
 function initApp() {
   ethereumService = new EthereumService();
 
+  console.log('Current Path:', window.location.pathname);
+
   switch (state.currentPage) {
     case '/':
     case '/index.html':
       console.log('index page');
       break;
+    case 'scanner':
+    case 'scanner.html':
     case '/src/pages/scanner.html':
       console.log('scanner page');
       setupEventListeners(ethereumService);
