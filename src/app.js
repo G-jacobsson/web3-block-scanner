@@ -1,13 +1,21 @@
 import EthereumService from './utilities/Http.js';
 import { state } from './utilities/config.js';
 import { setupEventListeners } from './lib/eventListeners.js';
+import { createDeepLink } from './lib/deepLink.js';
+import { showModal } from './lib/showModal.js';
 
 let ethereumService;
+
+if (!window.ethereum) {
+  showModal();
+}
 
 function initApp() {
   ethereumService = new EthereumService();
 
   console.log('Current Path:', window.location.pathname);
+
+  createDeepLink();
 
   switch (state.currentPage) {
     case '/':
