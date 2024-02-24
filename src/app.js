@@ -6,7 +6,7 @@ import { showModal } from './lib/showModal.js';
 
 let ethereumService;
 
-if (!window.ethereum) {
+if (!window.ethereum && !/Mobi|Android/i.test(navigator.userAgent)) {
   showModal();
 }
 
