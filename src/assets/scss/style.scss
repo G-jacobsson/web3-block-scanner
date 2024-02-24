@@ -129,4 +129,19 @@ main {
       background-size: 390% auto;
     }
   }
+
+  .list-transactions span {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: clamp(0.6rem, 2vw, 1rem);
+  }
+
+  .trx-container span {
+    padding: 10px;
+    font-size: clamp(0.6rem, 2vw, 1rem);
+  }
+
+  .wrapper-div {
+    overflow: scroll;
+  }
 }
