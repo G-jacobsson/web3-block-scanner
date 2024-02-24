@@ -7,6 +7,7 @@ const elements = {
   toAccountInput: document.querySelector('#toAccount'),
   sendBtn: document.querySelector('#sendTrx'),
   listTransactions: document.querySelector('#transactions'),
+  metamaskLink: document.querySelector('#metamaskLink'),
 };
 
 export default elements;
