@@ -1,6 +1,9 @@
 import { connectWallet } from './connectWallet.js';
 import { checkBalance } from './checkBalance.js';
 import { sendTransaction } from './sendTransaction.js';
+import { checkTransactions } from './checkTransactions.js';
+import { isValidEthereumAddress } from './checkValidAddress.js';
+import { switchNetwork, updateButtonColors } from './switchNetwork.js';
 import elements from './dom.js';
 
 export function setupEventListeners(ethereumService) {
@@ -17,6 +20,33 @@ export function setupEventListeners(ethereumService) {
         elements.displayBalance
       )
     );
+  }
+  if (elements.checkTransactionsBtn) {
+    elements.checkTransactionsBtn.addEventListener('click', () => {
+      const accountInputValue = elements.accountInput.value;
+      if (accountInputValue && isValidEthereumAddress(accountInputValue)) {
+        checkTransactions(
+          ethereumService,
+          elements.accountInput,
+          elements.listTransactions
+        );
+      } else {
+        alert('Please enter a valid Ethereum address.');
+      }
+    });
+  }
+  if (elements.goerliBtn) {
+    elements.goerliBtn.addEventListener('click', () => {
+      switchNetwork(ethereumService, 'goerli');
+      updateButtonColors('goerli');
+    });
+  }
+
+  if (elements.sepoliaBtn) {
+    elements.sepoliaBtn.addEventListener('click', () => {
+      switchNetwork(ethereumService, 'sepolia');
+      updateButtonColors('sepolia');
+    });
   }
   if (elements.sendBtn) {
     elements.sendBtn.addEventListener('click', () =>

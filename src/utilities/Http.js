@@ -95,6 +95,51 @@ export default class EthereumService {
     }
   }
 
+  async getBlockByNumber(blockNumber) {
+    try {
+      const block = await this.ethereum.request({
+        method: 'eth_getBlockByNumber',
+        params: [blockNumber, true],
+      });
+      return block;
+    } catch (error) {
+      console.error(`Error fetching block: ${error}`);
+      throw error;
+    }
+  }
+
+  async switchEthereumChain(chainName) {
+    const chainIds = {
+      sepolia: '0xaa36a7',
+      goerli: '0x5',
+    };
+    const chainId = chainIds[chainName];
+
+    if (!chainId) {
+      throw new Error('Chain not supported');
+    }
+
+    try {
+      await this.ethereum.request({
+        method: 'wallet_switchEthereumChain',
+        params: [{ chainId }],
+      });
+    } catch (error) {
+      console.error(`Error switching chain: ${chainName} - ${error}`);
+      throw error;
+    }
+  }
+
+  async getCurrentNetwork() {
+    try {
+      const networkId = await this.ethereum.request({ method: 'net_version' });
+      return networkId;
+    } catch (error) {
+      console.error(`Error fetching current network: ${error}`);
+      throw error; // Re-throw the error for handling by the caller
+    }
+  }
+
   weiToEther(weiBalance) {
     return parseInt(weiBalance) / Math.pow(10, 18);
   }

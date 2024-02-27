@@ -32,10 +32,46 @@
   cursor: pointer;
 }
 
+#sepolia {
+  background-color: #e73884;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#goerli {
+  background-color: #e73884;
+  position: absolute;
+  top: 10px;
+  right: 110px;
+}
+
 #connect {
   position: absolute;
   top: 10px;
   right: 10px;
+  background-image: -webkit-linear-gradient(top, #7fd782, #59b95c);
+  background-image: -moz-linear-gradient(top, #7fd782, #59b95c);
+  background-image: -ms-linear-gradient(top, #7fd782, #59b95c);
+  background-image: -o-linear-gradient(top, #7fd782, #59b95c);
+  background-image: linear-gradient(to bottom, #7fd782, #59b95c);
+}
+
+#sepolia.active {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-image: -webkit-linear-gradient(top, #7fd782, #59b95c);
+  background-image: -moz-linear-gradient(top, #7fd782, #59b95c);
+  background-image: -ms-linear-gradient(top, #7fd782, #59b95c);
+  background-image: -o-linear-gradient(top, #7fd782, #59b95c);
+  background-image: linear-gradient(to bottom, #7fd782, #59b95c);
+}
+
+#goerli.active {
+  position: absolute;
+  top: 10px;
+  right: 110px;
   background-image: -webkit-linear-gradient(top, #7fd782, #59b95c);
   background-image: -moz-linear-gradient(top, #7fd782, #59b95c);
   background-image: -ms-linear-gradient(top, #7fd782, #59b95c);

@@ -39,6 +39,19 @@
   <body>
     <main class="background">
       <div class="wrapper">
+        <p id="networkText">Connected testnet:</p>
+        <button
+          id="sepolia"
+          class="network-btn btn"
+        >
+          Sepolia
+        </button>
+        <button
+          id="goerli"
+          class="network-btn btn"
+        >
+          Goerli
+        </button>
         <div class="wrapper-div">
           <a href="/"
             ><button
@@ -68,6 +81,12 @@
                 class="btn"
               >
                 Check balance
+              </button>
+              <button
+                id="checkTransactions"
+                class="btn"
+              >
+                Check transactions
               </button>
               <span>ETH Balance</span>
               <div id="balance"></div>

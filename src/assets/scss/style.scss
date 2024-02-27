@@ -40,7 +40,7 @@ body {
   min-height: 50vh;
   // min-width: 300px;
   // min-height: 200px;
-  overflow: hidden;
+  overflow: scroll;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -94,7 +94,7 @@ h4 {
 
 .list-transactions span {
   white-space: nowrap;
-  overflow: hidden;
+  overflow: scroll;
   text-overflow: ellipsis;
   font-size: clamp(0.8rem, 2vw, 1rem);
 }
@@ -107,6 +107,22 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   animation: zoomEffect 50s ease-in-out infinite alternate;
+}
+
+.list-transactions > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+#networkText {
+  position: absolute;
+  padding: 10px;
+  top: 10px;
+  right: 200px;
+  color: $secondaryTextColor;
+  text-shadow: 0 0 5px $primaryColor;
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 
 @keyframes zoomEffect {
