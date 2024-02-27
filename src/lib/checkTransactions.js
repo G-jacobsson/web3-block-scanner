@@ -33,12 +33,12 @@ export async function checkTransactions(
 
       if (!foundTransactions) {
         listTransactions.innerHTML = `<div
-            style="width: fit-content; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; color: #0d1f1f; text-shadow: 0 0 5px #fababa; background: #fababa; border-radius: 10px; margin-top: 10px; padding: 10px;">No transactions found!
+            style="text-wrap: nowrap; width: fit-content; color: #0d1f1f; text-shadow: 0 0 5px #fababa; background: #fababa; border-radius: 10px; margin-top: 10px; padding: 10px;">No transactions found in the latest block!
           </div>`;
       }
     } else {
       listTransactions.innerHTML = `<div
-          style="width: fit-content; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; color: #0d1f1f; text-shadow: 0 0 5px #fababa; background: #fababa; border-radius: 10px; margin-top: 10px; padding: 10px;">No transactions found!
+          style="text-wrap: nowrap; width: fit-content; color: #0d1f1f; text-shadow: 0 0 5px #fababa; background: #fababa; border-radius: 10px; margin-top: 10px; padding: 10px;">No transactions found in the latest block!
         </div>`;
     }
   } catch (error) {

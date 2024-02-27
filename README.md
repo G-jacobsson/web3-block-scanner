@@ -5,6 +5,7 @@ Web3 Transaction App is a JavaScript application designed to interact with the E
 ## Features
 
 - **Connect Wallet:** Connect your wallet to interact with the Ethereum blockchain.
+- **Switch testnet:** Switch between Goerli and Sepolia testnets.
 - **Check Balance:** View the balance of your Ethereum account.
 - **Send Transaction:** Send transactions to other Ethereum addresses.
 - **View Transaction History:** Display a list of transactions sent from your wallet.
@@ -37,13 +38,13 @@ To use the Web3 Transaction App in desktop browser:
 
 1. Ensure you have an Ethereum wallet set up as a plug-in, such as MetaMask.
 2. Open the application in your preferred web browser, i.e. with VS code Live Server extention.
-3. Connect your wallet using the provided interface.
+3. Connect your wallet using the provided interface and switch between Goerli and Sepolia testnets.
 4. Check your balance, send transactions, and view transaction history as needed.
 
 To use the Web3 Transaction App with the MetaMask Mobile App:
 
 1. Log in to your MetaMask Mobile App.
-2. Make sure to check which network you are on. For test, connect to _Sepolia Testnet_.
+2. Make sure to check which network you are on. For test, connect to _Sepolia or Goerli Testnet_.
 3. Go to the broswer tab and enter
    > https://web3trxio.netlify.app
 4. To use the application, press connect, choose your account (if several), then check balance. Account balance will be displayed.
