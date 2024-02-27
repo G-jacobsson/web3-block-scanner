@@ -28,7 +28,8 @@ export function setupEventListeners(ethereumService) {
         checkTransactions(
           ethereumService,
           elements.accountInput,
-          elements.listTransactions
+          elements.listTransactions,
+          elements.displayBalance
         );
       } else {
         alert('Please enter a valid Ethereum address.');
@@ -41,7 +42,6 @@ export function setupEventListeners(ethereumService) {
       updateButtonColors('goerli');
     });
   }
-
   if (elements.sepoliaBtn) {
     elements.sepoliaBtn.addEventListener('click', () => {
       switchNetwork(ethereumService, 'sepolia');

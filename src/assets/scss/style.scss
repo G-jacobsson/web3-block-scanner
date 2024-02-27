@@ -9,13 +9,10 @@ html {
 
 body {
   height: 100%;
-  // background-image: $backgroundImage;
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-size: cover;
   font-family: 'Anta', sans-serif;
   font-size: 1.5rem;
   text-align: center;
+  overscroll-behavior: none;
 }
 
 .wrapper {
@@ -38,17 +35,12 @@ body {
   flex-direction: column;
   min-width: 50vw;
   min-height: 50vh;
-  // min-width: 300px;
-  // min-height: 200px;
   overflow: scroll;
   background: rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(16.9px);
   -webkit-backdrop-filter: blur(16.9px);
-  // border: 1px solid rgba(255, 255, 255, 0.44);
   padding: 20px;
-  // border: 3px solid $secondaryTextColor;
   border-radius: 10px;
   transition: all 0.3;
 }
@@ -113,16 +105,25 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  overflow: scroll;
 }
 
 #networkText {
   position: absolute;
-  padding: 10px;
   top: 10px;
   right: 200px;
   color: $secondaryTextColor;
   text-shadow: 0 0 5px $primaryColor;
   font-size: clamp(1rem, 2vw, 2rem);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16.9px);
+  -webkit-backdrop-filter: blur(16.9px);
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3;
+  width: fit-content;
+  height: fit-content;
 }
 
 @keyframes zoomEffect {
@@ -159,5 +160,12 @@ main {
 
   .wrapper-div {
     overflow: scroll;
+  }
+
+  #networkText {
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    font-size: clamp(0.6rem, 2vw, 1rem);
   }
 }
