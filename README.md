@@ -46,7 +46,7 @@ To use the Web3 Transaction App with the MetaMask Mobile App:
 1. Log in to your MetaMask Mobile App.
 2. Make sure to check which network you are on. For test, connect to _Sepolia or Goerli Testnet_.
 3. Go to the broswer tab and enter
-   > https://web3trxio.netlify.app
+   > https://scanchain.netlify.app/
 4. To use the application, press connect, choose your account (if several), then check balance. Account balance will be displayed.
 5. Enter amount you want to send, then enter an account address for reciever.
 6. Press send. You have to confirm or decline the transaction.
