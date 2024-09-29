@@ -35,7 +35,7 @@ body {
   flex-direction: column;
   min-width: 50vw;
   min-height: 50vh;
-  overflow: scroll;
+  overflow: auto;
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(16.9px);
